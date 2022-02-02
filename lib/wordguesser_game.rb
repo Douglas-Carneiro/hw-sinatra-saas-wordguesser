@@ -14,7 +14,7 @@ class WordGuesserGame
   # Creates the getter and setter methods
   attr_accessor(:word, :guesses, :wrong_guesses)
 
-  def guess letter
+  def guess(letter)
     if !letter || !letter.match?(/[[:alpha:]]/) || letter.empty?
       raise ArgumentError.new("Guess should be a valid letter")
     end
