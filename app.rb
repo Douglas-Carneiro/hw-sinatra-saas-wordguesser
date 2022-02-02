@@ -7,10 +7,12 @@ class WordGuesserApp < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
   
+  # this code is executed before every request
   before do
     @game = session[:game] || WordGuesserGame.new('')
   end
   
+  # this code is executed after every request
   after do
     session[:game] = @game
   end
