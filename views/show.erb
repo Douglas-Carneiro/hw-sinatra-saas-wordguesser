@@ -11,6 +11,11 @@
   </p>
 </div>
 
+<p class="alert alert-warning">
+  Remaining guesses:
+  <span class="word"><%= 7 - (@game.guesses.length + @game.wrong_guesses.length) %></span>
+</p>
+
 <p class="alert alert-success">
   Word so far:
   <span class="word"><%= @game.word_with_guesses %></span>
